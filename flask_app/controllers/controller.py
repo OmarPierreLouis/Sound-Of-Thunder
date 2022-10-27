@@ -3,7 +3,7 @@ from flask import render_template, redirect, session, request
 
 
 @app.route("/")
-def dashboard():
+def dashboard(): 
 
     return render_template("dashboard.html")
 
