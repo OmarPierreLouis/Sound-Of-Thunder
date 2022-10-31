@@ -13,8 +13,8 @@
 
 <body>
     <div class="main-container">
-        <a href="/" class="back-btn"> < Back </a> 
-            <div class="track-list w-75 border border-dark m-5 mx-auto">
+        <a href="/" class="back-btn">
+            < Back </a> <div class="track-list w-75 border border-dark m-5 mx-auto">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -24,24 +24,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for track in tracks %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <a href="/playone">Track 1</a>
+                            <td>{{track.track_number}}</td>
+                            <td> 
+                                <a href="/playtrack{{track.track_number}}">
+                                    {{track.song_title}}
+                                </a>
                             </td>
-                            <td>3:00</td>
+                            <td>{{track.song_duration}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Track 2</td>
-                            <td>3:00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Track 3</td>
-                            <td>3:00</td>
-                        </tr>
-                    </tbody>
+                        {% endfor %}
                 </table>
     </div>
     </div>
