@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <a href="/" class="back-btn">
-            < Back </a> <div class="track-list w-75 border border-dark m-5 mx-auto">
+    <div class="main-container mx-auto w-75 pt-5">
+        <a href="/" class="btn btn-dark btn-sm" role ="button">
+            < Back </a> 
+            <div class="track-list w-75 border border-dark m-5 mx-auto">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -28,7 +29,7 @@
                         <tr>
                             <td>{{track.track_number}}</td>
                             <td> 
-                                <a href="/playtrack{{track.track_number}}">
+                                <a href="/playtrack/{{track.track_number}}/{{track.song_title}}">
                                     {{track.song_title}}
                                 </a>
                             </td>
@@ -36,7 +37,7 @@
                         </tr>
                         {% endfor %}
                 </table>
-    </div>
+            </div>
     </div>
 </body>
 

@@ -1,24 +1,29 @@
-.main-container {
+/* .main-container {
     width: 75%;
     margin: auto;
     padding-top: 100px;
-}
+} */
 /* Back Button */
-.back-btn{
-    padding-left:30px;
-}
+/* a.back-btn{
+    margin-left:30px;
+    margin-right: 100px;
+} */
+/* .pt-5{
+    padding-top: spacer * 4;
+} */
 a {
     color: black;
     text-decoration: none;
     
 }
 
+/* Play Track Back Button */
+.back-button{
+    padding-left:30px;
+}
+
 a:hover {
     text-decoration: underline;
     /* color:black;
     background-color: purple; */
-}
-/* Playone Page */
-.play-one{
-    padding-top:100px;
 }

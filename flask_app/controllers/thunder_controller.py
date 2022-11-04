@@ -16,7 +16,10 @@ def tracklist():
     return render_template("tracklist.html", tracks = tracks)
 
 
-@app.route("/playtrack/<int:track_number>")
-def playone():
-
-    return render_template("playtrack.html")
+@app.route("/playtrack/<track_number>/<song_title>")
+def play_track(track_number, song_title):
+    data = {
+        'song_title': song_title,
+    }
+    track_list = Track.get_song_title(data)
+    return render_template("playtrack.html", track_list = track_list) 

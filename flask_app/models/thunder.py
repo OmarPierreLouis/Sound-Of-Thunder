@@ -28,3 +28,15 @@ class Track:
             # Variable to store the class instances #
             tracks.append( cls(dict) )
         return tracks
+
+    @classmethod
+    def play_track(cls,data):
+        query = "SELECT * FROM track_list WHERE track_number = %(track_number)s;"
+        results = connectToMySQL(cls.db).query_db(query,data)
+        return cls(results[0])
+
+    @classmethod
+    def get_song_title(cls,data):
+        query = "SELECT * FROM track_list WHERE song_title = %(song_title)s;"
+        results = connectToMySQL(cls.db).query_db(query,data)
+        return cls(results[0])
